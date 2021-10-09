@@ -1,6 +1,5 @@
 import Header from "next/head"
 
-import style from "style/home.module.scss"
 
 export default function Home() {
   return (
@@ -10,7 +9,6 @@ export default function Home() {
         <title>Home | Ig.News</title>
       </Header>
 
-      <h1 className={style.title}>I'm Back</h1>
     </>
   )
 }
