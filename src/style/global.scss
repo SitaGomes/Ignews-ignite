@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFF;
+    
+    --grey-100: #E1E1E6;
+    --grey-300: #A8A8B3;
+    --grey-900: #1F2729;
+
+    --cyan-500: #61DCFB;
+    --yellow-500: #EBA417;
+    --green-500: #04D361;
+
+    --background: #121414;
+}
+
+
+html {
+    /*
+        ? Para melhorar a acessibilidade, muda o tamanho das fontes dependendo do dispositivo
+        * font-size normal: 16px
+     */ 
+    @media (max-width: 1080px) { //* Tablet -> 15px
+        font-size: 93.75%; 
+    }
+    @media (max-width: 720px) { //* Mobile -> 14px
+        font-size: 87.5%; 
+    }
+}
+
+
+body {
+    background-color: var(--background);
+    color: var(--grey-100);
+}
+
+body, input, select, textarea, button {
+    font: 400 1rem "Roboto", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
