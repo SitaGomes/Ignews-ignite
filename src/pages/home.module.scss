@@ -1,0 +1,61 @@
+.Container {
+    margin: 0 auto;
+    max-width: 1120px;
+
+}
+
+.Content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 6.5rem;
+
+    section {
+        max-width: 508px;
+
+        > span {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 1.5rem;
+
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+
+            span {
+                color: var(--cyan-500);                               
+            }
+        }
+
+        p {
+            margin-bottom: 3rem;
+            font-size: 1.5rem;
+
+            span {
+                color: var(--cyan-500);               
+            }
+        }
+
+        button {
+            height: 3.5rem;
+            border-radius: 3.5rem;
+
+            background-color: var(--yellow-500);
+            padding: 1.5rem 4rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: bold;
+            
+        }
+    }
+
+}
