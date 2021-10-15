@@ -6,6 +6,7 @@ import style  from './style.module.scss'
 
 export const SingInButton: React.FC = () => {
     const [session] = useSession()  
+
     
     return session ? (
         <button 
