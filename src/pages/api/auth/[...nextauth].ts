@@ -20,19 +20,42 @@ export default NextAuth({
       try {
         
         await fauna.query(
-          q.Create(
-            q.Collection('users'),
-            { data: { email }}  
+          q.If(
+            q.Not(
+              q.Exists(
+                q.Match(
+                  q.Index("user_by_email"),
+                  email
+                )
+              )
+            ),
+            q.Create(
+              q.Collection("users"),
+              {data: {email: email}}
+            ),
+            q.Get(
+              q.Match(
+                q.Index("user_by_email"),
+                q.Casefold(email) //? Lower Case
+              )
+            )
           )
         )
+        /**
+         * ! Everything's inside the if statement
+         * 
+         * ? The first section is the condition to be met (user exists?)
+         * 
+         * * The middle is what's suposed to be done if true (create a new user)
+         * 
+         * * The last is the else statement (get the user's info)
+         */
         
         return true
       } catch {
         return false
       }
 
-
-        
     }
   }
 })
