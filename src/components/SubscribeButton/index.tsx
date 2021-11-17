@@ -7,7 +7,7 @@ interface SubscribeButtonProps {
     priceId: string;
 }
 
-export const SubscribeButton: React.FC<SubscribeButtonProps> = ({priceId}) => {
+export const SubscribeButton: React.FC = () => {
     const [session] = useSession()
 
     async function handleSubscribeButton() {
