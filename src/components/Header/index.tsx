@@ -1,3 +1,4 @@
+import {ActiveLink} from "./ActiveLink"
 import style from './header.module.scss'
 import { SingInButton } from './SingInButton'
 
@@ -8,8 +9,12 @@ export const Header: React.FC = () => {
             <div className={style.headerContent}>
                 <img src="/svg/logo.svg" alt="ig.news"/>
                 <nav>
-                    <a className={style.active}>Home</a>
-                    <a>Posts</a>
+                    <ActiveLink activeClassName={style.active} href="/">           
+                        <a>Home</a>
+                    </ActiveLink>
+                    <ActiveLink activeClassName={style.active} href="/posts">
+                        <a>Posts</a>
+                    </ActiveLink>
                 </nav>
                 <SingInButton />
             </div>
