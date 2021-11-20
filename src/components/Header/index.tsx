@@ -1,6 +1,7 @@
 import {ActiveLink} from "./ActiveLink"
-import style from './header.module.scss'
 import { SingInButton } from './SingInButton'
+
+import style from './header.module.scss'
 
 export const Header: React.FC = () => {
 
